@@ -95,7 +95,7 @@ let normal_inv p =
   else if p <= phigh then
     let q = p -. 0.5 in
     let r = q *. q in
-    q *. poly a r /. poly b r
+    q *. poly a r /. (1.0 +. r *. poly b r)
   else
     let q = Float.sqrt (-2.0 *. Float.log (1.0 -. p)) in
     -. poly c q /. (1.0 +. q *. poly d q)
