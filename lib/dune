@@ -1,0 +1,4 @@
+(library
+ (name probability_trading)
+ (wrapped false)
+ (modules stats monte_carlo probability dice_games cards options market_making))
